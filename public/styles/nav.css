@@ -1,0 +1,25 @@
+nav {
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    padding: 1.5em;
+    z-index: 5;
+    background-color: #4056A1;
+    color: #FFF;
+}
+
+nav * {
+    display: inline-flex;
+    float: right;
+    flex-direction: column;
+    margin: 0px;
+}
+
+nav * p {
+    text-align: center;
+}
+
+nav span {
+    font-family: 'Bungee', sans-serif;
+    float: left;
+}
