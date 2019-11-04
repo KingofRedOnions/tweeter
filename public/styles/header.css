@@ -1,6 +1,12 @@
 header {
     width: 100%;
     height: 400px;
+    background-color: #cc971d;
+    background-image: url("../images/black-linen-2.png");
+}
+
+header div {
+    padding-top: 5px;
 }
 
 header div img {
