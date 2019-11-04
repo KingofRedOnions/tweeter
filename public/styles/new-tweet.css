@@ -1,0 +1,24 @@
+.new-tweet form textarea {
+    width: 100%;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: #545149;
+    padding: 0px;
+    background: transparent;
+    resize: none;
+}
+
+.new-tweet form input {
+    font-family: 'Bungee', sans-serif;
+    color: #FFF;
+    background: #4056A1;
+    padding: 3px 5px;
+    border-style: none;
+}
+
+.new-tweet form .counter {
+    display: inline;
+    float: right;
+    font-family: 'Bungee', sans-serif;
+}
