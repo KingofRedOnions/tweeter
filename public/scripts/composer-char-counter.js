@@ -1,6 +1,6 @@
 $(document).ready(function() {
   const tweetText = $(".new-tweet > form > textarea");
-  const tweetTicker = $(".counter");
+  const tweetTicker = $(".new-tweet > form > .counter");
   let remainingChar = 140;
 
   tweetText.on('keyup', () => {
