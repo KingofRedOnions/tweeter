@@ -28,6 +28,7 @@ const submitTweet = function() {
       .done((data, status, xhr) => {
         console.log('It worked');
         console.log(xhr, status, data);
+        loadTweets(updateTweets);
       })
       .fail((xhr, status, err) => {
         console.log(xhr, status, err);
@@ -35,8 +36,18 @@ const submitTweet = function() {
   });
 };
 
-const updateTweets = function(cb) {
+const updateTweets = function(data) {
+  let newLastUpdate = lastUpdate;
+  const newTweets = data.filter(x => {
+    if (x.created_at > lastUpdate) {
+      newLastUpdate = x.created_at;
+    }
+    console.log(x.created_at);
+    return x.created_at > lastUpdate;
+  });
+  lastUpdate = newLastUpdate;
 
+  // callback here
 };
 
 const loadTweets = function(cb) {
