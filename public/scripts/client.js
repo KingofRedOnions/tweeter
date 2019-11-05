@@ -80,17 +80,16 @@ const createTweetElement = function(tweet) {
   const dateCreated = new Date(tweet.created_at).getTime();
   const timeSincePost = dateNow - dateCreated;
 
-  const $tweetElement = $('<article></article>')
-    .addClass('tweet');
-
-  $tweetElement.append(
-    `
+  const $tweetElement = $(`
+  <article class="tweet">
     <header>
       <img src=${tweet.user.avatars}>
       <p>${tweet.user.name}</p>
       <p>${tweet.user.handle}</p>
     </header>
+
     <p>${tweet.content.text}</p>
+
     <footer>
       <time>${timeSince(timeSincePost)}</time>
     <menu>
@@ -98,8 +97,8 @@ const createTweetElement = function(tweet) {
       <figure>⟲</figure>
       <figure>❤</figure>
     </menu>
-    `
-  );
+  </article>
+  `);
 
   return $tweetElement;
 };
