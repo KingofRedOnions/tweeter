@@ -49,9 +49,11 @@ const submitTweet = function() {
     console.log(event);
     $.ajax('/tweets/', {
       method: 'POST',
+      data: $tweetForm.serialize(),
     })
-      .done(() => {
+      .done((data, status, xhr) => {
         console.log('It worked');
+        console.log(xhr, status, data);
       })
       .fail((xhr, status, err) => {
         console.log(xhr, status, err);
