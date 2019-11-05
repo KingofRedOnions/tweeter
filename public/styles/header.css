@@ -16,6 +16,7 @@ header div img {
 }
 
 header div h2 {
+    color: white;
     display: block;
     margin: auto;
     text-align: center;

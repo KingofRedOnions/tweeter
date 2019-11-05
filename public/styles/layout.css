@@ -31,6 +31,14 @@ menu {
   margin-block-end: 0em;
 }
 
+h2 {
+  font-weight: normal;
+}
+
+b {
+  display: inline
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
