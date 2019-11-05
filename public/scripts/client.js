@@ -61,6 +61,10 @@ const submitTweet = function() {
   });
 };
 
+const loadTweets = function() {
+
+};
+
 // Will need to add a ticket to apply this to each post element
 // ever x period of time.
 // I'm not sure this is working right now..
