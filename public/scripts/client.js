@@ -10,7 +10,13 @@ const submitTweet = function() {
 
   $tweetForm.submit((event) => {
     event.preventDefault();
-    console.log(event);
+
+    if (!$tweetForm[0][0].value && 
+        !$tweetForm[0][0].value.length > 0) {
+      alert('Please enter text before submitting your tweet.');
+      return;
+    }
+    
     $.ajax('/tweets/', {
       method: 'POST',
       data: $tweetForm.serialize(),
