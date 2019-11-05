@@ -1,3 +1,7 @@
+.new-tweet {
+    margin-bottom: 50px;
+}
+
 .new-tweet form textarea {
     width: 100%;
     border-style: none;
