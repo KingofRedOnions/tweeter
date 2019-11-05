@@ -67,7 +67,7 @@ const timeSince = function(seconds) {
 const renderTweets = function(tweets) {
   // First sort the tweets from newest to oldest.
   let sortedTweets = tweets;
-  sortedTweets.sort((a, b) => a.created_at - b.created_at);
+  sortedTweets.sort((a, b) => b.created_at - a.created_at);
   const $tweets = $(".tweet-list");
 
   for (const tweet of tweets) {
