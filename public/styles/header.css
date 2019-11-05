@@ -3,6 +3,7 @@ header {
     height: 400px;
     background-color: #cc971d;
     background-image: url("../images/black-linen-2.png");
+    margin-bottom: 50px;
 }
 
 header div {

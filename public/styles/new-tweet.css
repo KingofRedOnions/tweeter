@@ -1,5 +1,4 @@
 .new-tweet {
-    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -23,7 +22,6 @@
 }
 
 .new-tweet form .counter {
-    display: inline;
     float: right;
     font-family: 'Bungee', sans-serif;
 }

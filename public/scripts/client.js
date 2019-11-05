@@ -137,12 +137,27 @@ const escape = function(str) {
   return div.innerHTML;
 };
 
-const toggleTweet = function() {
+let toggle = false;
 
+const toggleTweet = function(element) {
+  element.click((event) => {
+    
+    if (toggle) {
+      $('.container').animate({
+        top: '+=165',
+      }, 1000);
+      toggle = false;
+    } else {
+      $('.container').animate({
+        top: '-=165',
+      }, 1000);
+      toggle = true;
+    }
+  });
 };
 
 $(document).ready(function() {
   submitTweet();
   loadTweets(renderTweets);
-  toggleTweet();
+  toggleTweet($('nav > div'));
 });
