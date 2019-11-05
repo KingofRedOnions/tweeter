@@ -15,8 +15,11 @@ const submitTweet = function() {
         !$tweetForm[0][0].value.length > 0) {
       alert('Please enter text before submitting your tweet.');
       return;
+    } else if ($tweetForm[0][0].value.length > 140) {
+      alert('Please keep your tweets below 140 characters.');
+      return;
     }
-    
+
     $.ajax('/tweets/', {
       method: 'POST',
       data: $tweetForm.serialize(),
