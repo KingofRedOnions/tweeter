@@ -42,7 +42,21 @@ const data = [
 ];
 
 const submitTweet = function() {
+  const $tweetForm = $('.new-tweet > form');
 
+  $tweetForm.submit((event) => {
+    event.preventDefault();
+    console.log(event);
+    $.ajax('/tweets/', {
+      method: 'POST',
+    })
+      .done(() => {
+        console.log('It worked');
+      })
+      .fail((xhr, status, err) => {
+        console.log(xhr, status, err);
+      });
+  });
 };
 
 // Will need to add a ticket to apply this to each post element
@@ -109,4 +123,5 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
   renderTweets(data);
+  submitTweet();
 });
