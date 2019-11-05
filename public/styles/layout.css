@@ -26,6 +26,11 @@ p {
   margin-block-end: 0em;
 }
 
+menu {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
