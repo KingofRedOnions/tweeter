@@ -3,7 +3,7 @@ $(document).ready(function() {
   const tweetTicker = $(".counter");
   let remainingChar = 140;
 
-  tweetText.on('keyup', (key) => {
+  tweetText.on('keyup', () => {
     remainingChar = 140 - tweetText.val().length;
     tweetTicker.text(remainingChar);
 
