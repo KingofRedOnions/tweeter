@@ -38,6 +38,14 @@ const timeSince = function(seconds) {
   return Math.floor(seconds / 31104000) + ' years ago';
 };
 
+const renderTweets = function(tweets) {
+
+};
+
+const createTweetElement = function(tweet) {
+
+};
+
 $(document).ready(function() {
   const dateNow = Date.now();
   const dateCreated = new Date(tweet.created_at).getTime();
