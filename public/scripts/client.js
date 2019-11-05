@@ -135,9 +135,14 @@ const escape = function(str) {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
+
+const toggleTweet = function() {
+
+};
 
 $(document).ready(function() {
   submitTweet();
   loadTweets(renderTweets);
+  toggleTweet();
 });
