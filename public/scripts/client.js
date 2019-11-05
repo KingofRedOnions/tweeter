@@ -111,6 +111,8 @@ const createTweetElement = function(tweet) {
   const dateCreated = new Date(tweet.created_at).getTime();
   const timeSincePost = dateNow - dateCreated;
 
+  console.log(document.createTextNode(tweet.content.text));
+
   const $tweetElement = $(`
   <article class="tweet">
     <header>
@@ -119,7 +121,7 @@ const createTweetElement = function(tweet) {
       <p>${tweet.user.handle}</p>
     </header>
 
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
 
     <footer>
       <time>${timeSince(timeSincePost)}</time>
@@ -133,6 +135,12 @@ const createTweetElement = function(tweet) {
 
   return $tweetElement;
 };
+
+const escape = function(str) {
+  const div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 $(document).ready(function() {
   submitTweet();
