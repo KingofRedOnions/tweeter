@@ -146,11 +146,13 @@ const toggleTweet = function(element) {
         top: '+=165',
       }, 1000);
       toggle = false;
+      $('.new-tweet > form > textArea').focus();
     } else {
       $('.container').animate({
         top: '-=165',
       }, 1000);
       toggle = true;
+      $('.new-tweet > form > textArea').blur();
     }
   });
 };
