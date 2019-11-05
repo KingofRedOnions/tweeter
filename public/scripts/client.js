@@ -47,7 +47,7 @@ const updateTweets = function(data) {
   });
   lastUpdate = newLastUpdate;
 
-  // callback here
+  renderTweetsTop(newTweets);
 };
 
 const loadTweets = function(cb) {
@@ -92,6 +92,17 @@ const renderTweets = function(tweets) {
 
   for (const tweet of tweets) {
     $tweets.append(createTweetElement(tweet));
+  }
+};
+
+const renderTweetsTop = function(tweets) {
+  // These are being prepended, so sort from oldest to newest.
+  let sortedTweets = tweets;
+  sortedTweets.sort((a, b) => a.created_at - b.created_at);
+  const $tweets = $(".tweet-list");
+
+  for (const tweet of tweets) {
+    $tweets.prepend(createTweetElement(tweet));
   }
 };
 
