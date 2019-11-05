@@ -25,9 +25,7 @@ const submitTweet = function() {
       method: 'POST',
       data: $tweetForm.serialize(),
     })
-      .done((data, status, xhr) => {
-        console.log('It worked');
-        console.log(xhr, status, data);
+      .done(() => {
         loadTweets(updateTweets);
       })
       .fail((xhr, status, err) => {
@@ -42,7 +40,6 @@ const updateTweets = function(data) {
     if (x.created_at > lastUpdate) {
       newLastUpdate = x.created_at;
     }
-    console.log(x.created_at);
     return x.created_at > lastUpdate;
   });
   lastUpdate = newLastUpdate;
@@ -110,8 +107,6 @@ const createTweetElement = function(tweet) {
   const dateNow = Date.now();
   const dateCreated = new Date(tweet.created_at).getTime();
   const timeSincePost = dateNow - dateCreated;
-
-  console.log(document.createTextNode(tweet.content.text));
 
   const $tweetElement = $(`
   <article class="tweet">
