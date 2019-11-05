@@ -25,8 +25,14 @@ const submitTweet = function() {
   });
 };
 
-const loadTweets = function() {
+const loadTweets = function(cb) {
 
+  $.ajax('/tweets/', {
+    method: 'GET'
+  })
+    .done((data, status, xhr) => {
+      cb(data);
+    });
 };
 
 // Will need to add a ticket to apply this to each post element
@@ -92,7 +98,6 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
-  renderTweets(data);
   submitTweet();
-  loadTweets();
+  loadTweets(renderTweets);
 });
