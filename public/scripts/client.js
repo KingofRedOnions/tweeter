@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+let lastUpdate = 0;
 
 const submitTweet = function() {
   const $tweetForm = $('.new-tweet > form');
@@ -11,7 +12,7 @@ const submitTweet = function() {
   $tweetForm.submit((event) => {
     event.preventDefault();
 
-    if (!$tweetForm[0][0].value && 
+    if (!$tweetForm[0][0].value &&
         !$tweetForm[0][0].value.length > 0) {
       alert('Please enter text before submitting your tweet.');
       return;
@@ -32,6 +33,10 @@ const submitTweet = function() {
         console.log(xhr, status, err);
       });
   });
+};
+
+const updateTweets = function(cb) {
+
 };
 
 const loadTweets = function(cb) {
@@ -71,6 +76,7 @@ const renderTweets = function(tweets) {
   // First sort the tweets from newest to oldest.
   let sortedTweets = tweets;
   sortedTweets.sort((a, b) => b.created_at - a.created_at);
+  lastUpdate = sortedTweets[0].created_at;
   const $tweets = $(".tweet-list");
 
   for (const tweet of tweets) {
