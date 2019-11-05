@@ -8,9 +8,9 @@ $(document).ready(function() {
     tweetTicker.text(remainingChar);
 
     if (remainingChar >= 0) {
-      tweetTicker.css('color', '#545149');
+      tweetTicker.removeClass('invalid');
     } else {
-      tweetTicker.css('color', 'red');
+      tweetTicker.addClass('invalid');
     }
   });
 });

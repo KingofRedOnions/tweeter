@@ -22,3 +22,7 @@
     float: right;
     font-family: 'Bungee', sans-serif;
 }
+
+.new-tweet form .counter.invalid {
+    color: red;
+}
