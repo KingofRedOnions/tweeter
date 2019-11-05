@@ -137,11 +137,10 @@ const escape = function(str) {
   return div.innerHTML;
 };
 
-let toggle = false;
+let toggle = true;
 
 const toggleTweet = function(element) {
   element.click((event) => {
-    
     if (toggle) {
       $('.container').animate({
         top: '+=165',
