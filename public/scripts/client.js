@@ -28,10 +28,11 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 // Will need to add a ticket to apply this to each post element
 // ever x period of time.
+// I'm not sure this is working right now..
 const timeSince = function(seconds) {
   if (seconds < 60) {
     return 'Under a minute ago';
@@ -53,10 +54,21 @@ const timeSince = function(seconds) {
 };
 
 const renderTweets = function(tweets) {
+  // First sort the tweets from newest to oldest.
+  let sortedTweets = tweets;
+  sortedTweets.sort((a, b) => a.created_at - b.created_at);
+  const $tweets = $(".tweet-list");
 
+  for (const tweet of tweets) {
+    $tweets.append(createTweetElement(tweet));
+  }
 };
 
 const createTweetElement = function(tweet) {
+  const dateNow = Date.now();
+  const dateCreated = new Date(tweet.created_at).getTime();
+  const timeSincePost = dateNow - dateCreated;
+
   const tweetElement = $('<article></article>')
     .addClass('tweet');
 
@@ -82,14 +94,5 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
-  const dateNow = Date.now();
-  const dateCreated = new Date(tweet.created_at).getTime();
-  const timeSincePost = dateNow - dateCreated;
-  // Going to implement changing from minutes -> hours -> days.
-  
-  
-    $('.tweet-list').append(tweetElement);
-  };
-  
-  createTweetElement(tweet);
+  renderTweets(data);
 });
