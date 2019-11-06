@@ -5,7 +5,7 @@
 }
 
 .tweet:hover {
-    box-shadow: 10px 10px #c0b9b9;
+    box-shadow: 10px 10px hsl(0, 5%, 74%);
 }
 
 .tweet:hover header p:nth-child(3) {
@@ -21,7 +21,6 @@
 }
 
 .tweet header {
-    display: flex;
     align-items: center;
     background-color: #f4f1ec;
     background-image: none;
@@ -31,6 +30,11 @@
 
 .tweet header * {
     margin: 0px 10px 0px 10px;
+    float: left;
+}
+
+.tweet header p:nth-child(3) {
+    float: right;
 }
 
 .tweet header p {
