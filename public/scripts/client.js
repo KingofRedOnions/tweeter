@@ -138,12 +138,15 @@ const createTweetElement = function(tweet) {
   return $tweetElement;
 };
 
+// Preventative measure for cross site scripting.
+// Escapes user provided strings.
 const escape = function(str) {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// Hides or unhides the compose tweet box
 const toggleTweet = function(element) {
   element.click(() => {
     if ($('.container').hasClass('expanded')) {

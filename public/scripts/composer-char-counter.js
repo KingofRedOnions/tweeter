@@ -1,3 +1,4 @@
+// Unhides the skip to top button when 400 pixels down the page.
 const scrollListener = function() {
   $(document).scroll((event) => {
     if ($(document).scrollTop() > 400) {
@@ -8,11 +9,13 @@ const scrollListener = function() {
   });
 };
 
+// Drag window to top of document.
 const skipToTop = function() {
   $('#skip-to-top').click(() => {
     $(document).scrollTop(0);
   });
 };
+
 
 $(document).ready(function() {
   const tweetText = $(".new-tweet > form > textarea");
