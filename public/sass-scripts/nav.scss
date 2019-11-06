@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'fonts';
 
 nav {
   position: fixed;
@@ -23,11 +24,11 @@ nav div {
 
 nav * p {
   text-align: center;
-  font-family: 'Source Sans Pro', 'sans-serif';
+  font-family: fonts.$s-sans, 'sans-serif';
 }
 
 nav span {
-  font-family: 'Bungee', sans-serif;
+  font-family: fonts.$bungee, sans-serif;
   float: left;
 }
 

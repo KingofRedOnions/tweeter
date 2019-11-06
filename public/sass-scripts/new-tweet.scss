@@ -1,3 +1,6 @@
+@use 'colors';
+@use 'fonts';
+
 .new-tweet {
   margin: 50px auto;
   width: 90%;
@@ -17,14 +20,14 @@
 .new-tweet form input {
   font-family: 'Bungee', sans-serif;
   color: #FFF;
-  background: #4056A1;
+  background: colors.$tweeter-blue;
   padding: 3px 5px;
   border-style: none;
 }
 
 .new-tweet form .counter {
   float: right;
-  font-family: 'Bungee', sans-serif;
+  font-family: fonts.$bungee, sans-serif;
 }
 
 .new-tweet form .counter.invalid {

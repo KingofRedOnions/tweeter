@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'fonts';
 
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -21,7 +22,7 @@ html {
 body {
   color: colors.$content-font-color;
   background-color: colors.$background-color;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: fonts.$s-sans, sans-serif;
   font-size: 24px;
 }
 
