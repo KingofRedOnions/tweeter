@@ -1,11 +1,15 @@
+@use 'colors';
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- html {
+
+html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,12 +18,9 @@
  * Global layout stuff
  */
 
-$background-color: #f4f1ec;
-$content-font-color: #545149;
-
 body {
-  color: $content-font-color;
-  background-color: $background-color;
+  color: colors.$content-font-color;
+  background-color: colors.$background-color;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass-scripts/skip-to-top.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE","file":"skip-to-top.css"}
+{"version":3,"sourceRoot":"","sources":["../sass-scripts/skip-to-top.scss","../sass-scripts/colors.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,YCNY;EDOZ;EACA;EACA;;;AAGF;EACE","file":"skip-to-top.css"}

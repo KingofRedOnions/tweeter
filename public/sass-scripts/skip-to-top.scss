@@ -1,3 +1,5 @@
+@use 'colors';
+
 #skip-to-top {
   position: fixed;
   width: 30mm;
@@ -6,7 +8,7 @@
   right: 15px;
   border-radius: 50%;
   border-style: none;
-  background: rgb(255, 94, 0);
+  background: colors.$skip-orange;
   z-index: 5;
   font-size: 20mm;
   cursor: pointer;
