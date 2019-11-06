@@ -16,8 +16,8 @@ const skipToTop = function() {
   });
 };
 
-
-$(document).ready(function() {
+// Manages remaining character ticker.
+const characterTicker = function() {
   const tweetText = $(".new-tweet > form > textarea");
   const tweetTicker = $(".new-tweet > form > .counter");
   let remainingChar = 140;
@@ -32,7 +32,10 @@ $(document).ready(function() {
       tweetTicker.addClass('invalid');
     }
   });
+};
 
+$(document).ready(function() {
+  characterTicker();
   scrollListener();
   skipToTop();
 });
