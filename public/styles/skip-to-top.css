@@ -1,0 +1,16 @@
+#skip-to-top {
+  position: fixed;
+  width: 30mm;
+  height: 30mm;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+  border-style: none;
+  background: rgb(255, 94, 0);
+  z-index: 5;
+  font-size: 20mm;
+}
+
+#skip-to-top .hidden {
+  visibility: hidden;
+}
