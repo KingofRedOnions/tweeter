@@ -8,6 +8,12 @@ const scrollListener = function() {
   });
 };
 
+const skipToTop = function() {
+  $('#skip-to-top').click(() => {
+    $(document).scrollTop(0);
+  });
+};
+
 $(document).ready(function() {
   const tweetText = $(".new-tweet > form > textarea");
   const tweetTicker = $(".new-tweet > form > .counter");
@@ -25,4 +31,5 @@ $(document).ready(function() {
   });
 
   scrollListener();
+  skipToTop();
 });
