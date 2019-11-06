@@ -14,10 +14,10 @@ const submitTweet = function() {
 
     if (!$tweetForm[0][0].value &&
         !$tweetForm[0][0].value.length > 0) {
-      alert('Please enter text before submitting your tweet.');
+      $('.new-tweet > form > label').text('Please enter text before submitting your tweet.');
       return;
     } else if ($tweetForm[0][0].value.length > 140) {
-      alert('Please keep your tweets below 140 characters.');
+      $('.new-tweet > form > label').text('Please keep your tweets below 140 characters.');
       return;
     }
 
