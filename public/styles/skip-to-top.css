@@ -11,6 +11,6 @@
   font-size: 20mm;
 }
 
-#skip-to-top .hidden {
+#skip-to-top.hidden {
   visibility: hidden;
 }
