@@ -9,6 +9,7 @@
   background: rgb(255, 94, 0);
   z-index: 5;
   font-size: 20mm;
+  cursor: pointer;
 }
 
 #skip-to-top.hidden {

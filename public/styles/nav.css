@@ -15,6 +15,10 @@ nav * {
     margin: 0px;
 }
 
+nav div {
+    cursor: pointer;
+}
+
 nav * p {
     text-align: center;
     font-family: 'Source Sans Pro', 'sans-serif';
