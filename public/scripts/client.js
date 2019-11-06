@@ -9,18 +9,19 @@ let lastUpdate = 0;
 const submitTweet = function() {
   const $tweetForm = $('.new-tweet > form');
   const $tweetText = $('.new-tweet > form > textArea');
+  const $tweetError = $('.new-tweet > form > label');
 
   $tweetForm.submit((event) => {
     event.preventDefault();
 
     if (!$tweetText.val() &&
         !$tweetText.val() > 0) {
-      $('.new-tweet > form > label')
+      $tweetError
         .removeClass('hidden')
         .text('Please enter text before submitting your tweet.');
       return;
     } else if ($tweetText.val().length > 140) {
-      $('.new-tweet > form > label')
+      $tweetError
         .removeClass('hidden')
         .text('Please keep your tweets below 140 characters.');
       return;
