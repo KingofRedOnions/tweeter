@@ -29,3 +29,8 @@
 .new-tweet form .counter.invalid {
     color: red;
 }
+
+.new-tweet form label {
+    margin-left: 10px;
+    color: red;
+}
