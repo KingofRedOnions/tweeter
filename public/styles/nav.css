@@ -7,23 +7,19 @@ nav {
   background-color: #4056A1;
   color: #FFF;
 }
-
 nav * {
   display: inline-flex;
   float: right;
   flex-direction: column;
   margin: 0px;
 }
-
-nav div {
-  cursor: pointer;
-}
-
 nav * p {
   text-align: center;
   font-family: "Source Sans Pro", "sans-serif";
 }
-
+nav div {
+  cursor: pointer;
+}
 nav span {
   font-family: "Bungee", sans-serif;
   float: left;

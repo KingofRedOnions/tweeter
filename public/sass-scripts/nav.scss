@@ -9,27 +9,27 @@ nav {
   z-index: 5;
   background-color: colors.$tweeter-blue;
   color: #FFF;
-}
 
-nav * {
-  display: inline-flex;
-  float: right;
-  flex-direction: column;
-  margin: 0px;
-}
+  * {
+    display: inline-flex;
+    float: right;
+    flex-direction: column;
+    margin: 0px;
 
-nav div {
-  cursor: pointer;
-}
+    p {
+      text-align: center;
+      font-family: fonts.$s-sans, 'sans-serif';
+    }
+  }
 
-nav * p {
-  text-align: center;
-  font-family: fonts.$s-sans, 'sans-serif';
-}
+  div {
+    cursor: pointer;
+  }
 
-nav span {
-  font-family: fonts.$bungee, sans-serif;
-  float: left;
+  span {
+    font-family: fonts.$bungee, sans-serif;
+    float: left;
+  }
 }
 
 #nav-spacer {
