@@ -15,7 +15,7 @@
 }
 
 .new-tweet form input {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   color: #FFF;
   background: #4056A1;
   padding: 3px 5px;
@@ -24,7 +24,7 @@
 
 .new-tweet form .counter {
   float: right;
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
 }
 
 .new-tweet form .counter.invalid {
@@ -44,5 +44,3 @@
   transition-property: opacity;
   transition-duration: 0.5s;
 }
-
-/*# sourceMappingURL=new-tweet.css.map */

@@ -10,15 +10,15 @@
     float: right;
   }
 }
+
 @media only screen and (max-width: 1023px) {
   nav {
     position: absolute;
     background: none;
   }
 
+
   #nav-spacer {
     height: 0px;
   }
 }
-
-/*# sourceMappingURL=dynamic.css.map */

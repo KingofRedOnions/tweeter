@@ -5,7 +5,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px #c0b9b9;
+  box-shadow: 10px 10px hsl(0, 5%, 74%);
 }
 
 .tweet:hover header p:nth-child(3) {
@@ -48,7 +48,7 @@
 
 .tweet header p:nth-child(3) {
   margin-left: auto;
-  color: #a39b9b;
+  color: rgb(163, 155, 155);
   visibility: hidden;
 }
 
@@ -83,7 +83,5 @@
 .tweet footer menu figure {
   margin: 0px;
   display: inline-block;
-  color: #3131e7;
+  color: rgb(49, 49, 231);
 }
-
-/*# sourceMappingURL=tweet.css.map */
