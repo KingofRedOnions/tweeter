@@ -21,6 +21,10 @@
     border-style: none;
 }
 
+.new-tweet form input.hidden {
+    visibility: hidden;
+}
+
 .new-tweet form .counter {
     float: right;
     font-family: 'Bungee', sans-serif;

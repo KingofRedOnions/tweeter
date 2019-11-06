@@ -8,16 +8,21 @@ let lastUpdate = 0;
 
 const submitTweet = function() {
   const $tweetForm = $('.new-tweet > form');
+  const $tweetText = $('.new-tweet > form > textArea');
 
   $tweetForm.submit((event) => {
     event.preventDefault();
 
-    if (!$tweetForm[0][0].value &&
-        !$tweetForm[0][0].value.length > 0) {
-      $('.new-tweet > form > label').text('Please enter text before submitting your tweet.');
+    if (!$tweetText.val() &&
+        !$tweetText.val() > 0) {
+      $('.new-tweet > form > label')
+        .removeClass('hidden')
+        .text('Please enter text before submitting your tweet.');
       return;
-    } else if ($tweetForm[0][0].value.length > 140) {
-      $('.new-tweet > form > label').text('Please keep your tweets below 140 characters.');
+    } else if ($tweetText.val().length > 140) {
+      $('.new-tweet > form > label')
+        .removeClass('hidden')
+        .text('Please keep your tweets below 140 characters.');
       return;
     }
 
