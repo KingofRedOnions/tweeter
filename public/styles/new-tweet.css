@@ -1,5 +1,6 @@
 .new-tweet {
-    margin-bottom: 50px;
+    margin: 50px auto;
+    width: 90%;
 }
 
 .new-tweet form textarea {

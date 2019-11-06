@@ -1,0 +1,11 @@
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 40%;
+    float: left;
+  }
+
+  .container {
+    width: 60%;
+    float: right;
+  }
+}
