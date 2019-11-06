@@ -55,7 +55,7 @@
 
 .tweet footer {
     width: 100%;
-    display: flex;
+    display: block;
     justify-content: space-between;
 }
 
@@ -65,11 +65,12 @@
 }
 
 .tweet footer menu {
+    float: right;
     margin-right: 1em;
 }
 
 .tweet footer menu figure {
     margin: 0px;
-    display: inline;
+    display: inline-block;
     color: rgb(49, 49, 231);
 }
