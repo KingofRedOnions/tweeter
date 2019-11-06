@@ -48,4 +48,10 @@ b {
   margin: auto;
   position: relative;
   top: -165px;
+  transition-property: top;
+  transition-duration: 0.5s;
+}
+
+.expanded {
+  top: 0px;
 }
