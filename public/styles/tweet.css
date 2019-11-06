@@ -21,9 +21,7 @@
 }
 
 .tweet header * {
-    display: inline;
-    display: flex;
-    align-items: center;
+    margin: 0px 10px 0px 10px;
 }
 
 .tweet header p {
