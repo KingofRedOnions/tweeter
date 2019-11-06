@@ -25,7 +25,6 @@ const submitTweet = function() {
       $tweetError
         .text('Please keep your tweets below 140 characters.')
         .removeClass('hidden');
-        
       return;
     }
 

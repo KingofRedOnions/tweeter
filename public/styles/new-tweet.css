@@ -33,8 +33,13 @@
 .new-tweet form label {
     margin-left: 10px;
     color: red;
+    opacity: 100%;
+    transition-property: opacity;
+    transition-duration: 0.5s;
 }
 
 .new-tweet form label.hidden {
-    visibility: hidden;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 0.5s;
 }
