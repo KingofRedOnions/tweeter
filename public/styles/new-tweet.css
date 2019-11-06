@@ -21,10 +21,6 @@
     border-style: none;
 }
 
-.new-tweet form input.hidden {
-    visibility: hidden;
-}
-
 .new-tweet form .counter {
     float: right;
     font-family: 'Bungee', sans-serif;
@@ -37,4 +33,8 @@
 .new-tweet form label {
     margin-left: 10px;
     color: red;
+}
+
+.new-tweet form label.hidden {
+    visibility: hidden;
 }

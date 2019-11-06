@@ -13,17 +13,19 @@ const submitTweet = function() {
 
   $tweetForm.submit((event) => {
     event.preventDefault();
+    $tweetError.addClass('hidden');
 
     if (!$tweetText.val() &&
         !$tweetText.val() > 0) {
       $tweetError
-        .removeClass('hidden')
-        .text('Please enter text before submitting your tweet.');
+        .text('Please enter text before submitting your tweet.')
+        .removeClass('hidden');
       return;
     } else if ($tweetText.val().length > 140) {
       $tweetError
-        .removeClass('hidden')
-        .text('Please keep your tweets below 140 characters.');
+        .text('Please keep your tweets below 140 characters.')
+        .removeClass('hidden');
+        
       return;
     }
 
