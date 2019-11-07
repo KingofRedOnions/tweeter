@@ -20,6 +20,9 @@ nav * p {
 nav div {
   cursor: pointer;
 }
+nav p:nth-child(2) {
+  color: #ff5e00;
+}
 nav span {
   font-family: "Bungee", sans-serif;
   float: left;

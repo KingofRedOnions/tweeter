@@ -26,6 +26,10 @@ nav {
     cursor: pointer;
   }
 
+  p:nth-child(2) {
+    color: colors.$skip-orange;
+  }
+
   span {
     font-family: fonts.$bungee, sans-serif;
     float: left;
