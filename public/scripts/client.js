@@ -6,6 +6,18 @@
 
 let lastUpdate = 0;
 
+const submitOnEnter = function() {
+  const $tweetText = $('.new-tweet > form > textArea');
+  const $tweetForm = $('.new-tweet > form');
+
+  $tweetText.keydown((key) => {
+    if (key.key === 'Enter') {
+      key.preventDefault();
+      $tweetForm.submit();
+    }
+  });
+};
+
 const submitTweet = function() {
   const $tweetForm = $('.new-tweet > form');
   const $tweetText = $('.new-tweet > form > textArea');
@@ -163,6 +175,7 @@ const toggleTweet = function(element) {
 
 $(document).ready(function() {
   submitTweet();
+  submitOnEnter();
   loadTweets(renderTweets);
   toggleTweet($('nav > div'));
 });
