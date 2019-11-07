@@ -28,6 +28,8 @@ const submitTweet = function() {
       return;
     }
 
+    $tweetText.val('');
+
     $.ajax('/tweets/', {
       method: 'POST',
       data: $tweetForm.serialize(),
