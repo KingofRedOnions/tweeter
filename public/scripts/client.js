@@ -68,23 +68,25 @@ const loadTweets = function(cb) {
 // ever x period of time.
 // I'm not sure this is working right now..
 const timeSince = function(seconds) {
-  if (seconds < 60000) {
+  seconds /= 1000;
+
+  if (seconds < 60) {
     return 'Under a minute ago';
   }
-  if (seconds < 3600000) {
-    return Math.floor(seconds / 60000) + ' minutes ago';
+  if (seconds < 3600) {
+    return Math.floor(seconds / 60) + ' minutes ago';
   }
-  if (seconds < 86400000) {
-    return Math.floor(seconds / 3600000) + ' hours ago';
+  if (seconds < 86400) {
+    return Math.floor(seconds / 3600) + ' hours ago';
   }
   // All approximations from here, for now.
-  if (seconds < 2592000000) {
-    return Math.floor(seconds / 86400000) + ' days ago';
+  if (seconds < 2592000) {
+    return Math.floor(seconds / 86400) + ' days ago';
   }
-  if (seconds < 31104000000) {
-    return Math.floor(seconds / 2592000000) + ' months ago';
+  if (seconds < 31104000) {
+    return Math.floor(seconds / 2592000) + ' months ago';
   }
-  return Math.floor(seconds / 31104000000) + ' years ago';
+  return Math.floor(seconds / 31104000) + ' years ago';
 };
 
 const renderTweets = function(tweets) {
