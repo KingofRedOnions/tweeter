@@ -11,6 +11,14 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Screenshots
+
+<img src="screenshots/TweeterFull.png" alt="Tweeter Full Screen" width="400" /> 
+<img src="screenshots/TweeterFullScroll.png" alt="Tweet Full Screen Scrolled" width="400" />
+<br>
+<img src="screenshots/TweeterShrunk.png" alt="Tweet Shrunk" width="200" />
+<img src="screenshots/TweeterShrunkScroll.png" alt="Tweet Shrunk Scrolled" width="200" />
+
 ## Usage
 
 There is a 'Write a new tweet' button at the top right that will slide down the new tweet box.  For the purpose of the demo, submitting a tweet will send the text to the server in a POST request, the server will generate a random name and ID, and then the client will request new tweets and prepend them to the list.
