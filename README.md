@@ -31,3 +31,6 @@ When scrolling down, the site will also pop a corner button that will allow you 
 
 - Express
 - Node 5.10.x or above
+- Chance
+- JQuery
+- body-parser
