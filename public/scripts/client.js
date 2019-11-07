@@ -28,13 +28,12 @@ const submitTweet = function() {
       return;
     }
 
-    $tweetText.val('');
-
     $.ajax('/tweets/', {
       method: 'POST',
       data: $tweetForm.serialize(),
     })
       .done(() => {
+        $tweetText.val('');
         loadTweets(updateTweets);
       })
       .fail((xhr, status, err) => {
