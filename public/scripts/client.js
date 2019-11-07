@@ -46,6 +46,7 @@ const submitTweet = function() {
     })
       .done(() => {
         $tweetText.val('');
+        $('.counter').text('140');
         loadTweets(updateTweets);
       })
       .fail((xhr, status, err) => {
